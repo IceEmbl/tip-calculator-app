@@ -13,7 +13,7 @@ const totalOutput = document.getElementById("total-per-person");
 resetButton.disabled = true;
 
 function updateCalculator() {
-    const hasValues = billPrice > 0 || tipPercent > 0  || people > 0 || billInput.value !== "" || customTipInput.value !== "";
+    const hasValues = billPrice > 0 || tipPercent > 0 || billInput.value !== "" || customTipInput.value !== "";
     resetButton.disabled = !hasValues;
 
     if (people > 0) {
@@ -23,10 +23,12 @@ function updateCalculator() {
         totalOutput.textContent = "$" + resultTotalPerPerson.toFixed(2);
         numberOfPeopleInput.classList.remove("error");
         errorMessage.classList.remove("show-error");
+        numberOfPeopleInput.setAttribute("aria-invalid", "false");
     }
     else {
         numberOfPeopleInput.classList.add("error");
         errorMessage.classList.add("show-error");
+        numberOfPeopleInput.setAttribute("aria-invalid", "true");
     }
 }
 
