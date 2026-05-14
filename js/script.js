@@ -76,8 +76,8 @@ if (resetButton) {
         numberOfPeopleInput.value = "";
         customTipInput.value = "";
 
-        document.getElementById("tip-amount-per-person").textContent = "$0.00";
-        document.getElementById("total-per-person").textContent = "$0.00";
+        tipAmountOutput.textContent = "$0.00";
+        totalOutput.textContent = "$0.00";
 
         buttons.forEach((button) => {
             button.classList.remove("active");
