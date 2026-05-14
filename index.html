@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <header class="main-header">
+        <h1 class="main-header-heading">SPLITTER</h1>
+      </header>
+      <article class="tip-calculator">
+        <section class="tip-calculator-factors bill-section">
+          <label class="tip-calculator-factors-gray-text" for="bill"
+            >Bill</label
+          >
+          <div class="tip-calculator-factors-elements">
+            <img
+              class="tip-calculator-factors-image"
+              src="images/icon-dollar.svg"
+              alt=""
+              width="11"
+              height="20"
+            />
+            <input
+              class="tip-calculator-factors-input-text"
+              id="bill"
+              name="bill"
+              type="number"
+            />
+          </div>
+        </section>
+        <section class="tip-calculator-tip-choices">
+          <h2 class="tip-calculator-choices-gray-text">Select Tip %</h2>
+          <ul class="tip-calculator-tip-grid">
+            <li class="tip-calculator-tip-grid-items">
+              <button class="buttons-reset button-tip-choices" type="button">
+                5%
+              </button>
+            </li>
+            <li class="tip-calculator-tip-grid-items">
+              <button class="buttons-reset button-tip-choices" type="button">
+                10%
+              </button>
+            </li>
+            <li class="tip-calculator-tip-grid-items">
+              <button class="buttons-reset button-tip-choices" type="button">
+                15%
+              </button>
+            </li>
+            <li class="tip-calculator-tip-grid-items">
+              <button class="buttons-reset button-tip-choices" type="button">
+                25%
+              </button>
+            </li>
+            <li class="tip-calculator-tip-grid-items">
+              <button class="buttons-reset button-tip-choices" type="button">
+                50%
+              </button>
+            </li>
+            <li class="tip-calculator-tip-grid-items custom-input-background">
+              <input
+                id="custom-tip-input"
+                class="buttons-reset custom-input"
+                name="custom"
+                type="number"
+                placeholder="Custom"
+              />
+            </li>
+          </ul>
+        </section>
+        <section class="tip-calculator-factors number-of-people-section">
+          <div class="tip-calculator-factors-start">
+            <label
+              class="tip-calculator-factors-gray-text"
+              for="number-of-people"
+              >Number of people</label
+            >
+            <span class="error-message">Invalid value</span>
+          </div>
+          <div class="tip-calculator-factors-elements">
+            <img
+              class="tip-calculator-factors-image"
+              src="images/icon-person.svg"
+              alt=""
+              width="15"
+              height="20"
+            />
+            <input
+              class="tip-calculator-factors-input-text"
+              id="number-of-people"
+              name="number-of-people"
+              type="number"
+            />
+          </div>
+        </section>
+        <footer class="footer-results">
+          <section class="footer-count footer-section-tip">
+            <div class="footer-results-first-column">
+              <h2 class="footer-count-heading">Tip Amount</h2>
+              <p class="footer-count-paragraph">/ person</p>
+            </div>
+            <span
+              aria-live="polite"
+              id="tip-amount-per-person"
+              class="tip-result"
+              >$0.00</span
+            >
+          </section>
+          <section class="footer-count footer-section-total">
+            <div class="footer-results-first-column">
+              <h2 class="footer-count-heading">Total</h2>
+              <p class="footer-count-paragraph">/ person</p>
+            </div>
+            <span aria-live="polite" id="total-per-person" class="tip-result"
+              >$0.00</span
+            >
+          </section>
+          <button class="reset-button" type="reset">Reset</button>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
